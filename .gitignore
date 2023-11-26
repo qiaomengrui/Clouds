@@ -1,0 +1,15 @@
+# Project exclude paths
+/api-common/target/
+/eureka-server/target/
+/eureka-server-2/target/
+/hystrix-dashboard/target/
+/oder-consumer-2/target/
+/order-consumer/target/
+/order-consumer-3/target/
+/order-consumer-feign/target/
+/order-consumer-feign-hystrix/target/
+/payment-provide-2/target/
+/payment-provide-3/target/
+/payment-provide-4/target/
+/payment-provider/target/
+/payment-provider-hystrix/target/
