@@ -31,6 +31,7 @@
     <module>payment-provider-hystrix</module>
     <module>order-consumer-feign-hystrix</module>
     <module>hystrix-dashboard</module>
+    <module>server-gateway</module>
   </modules>
 
 
