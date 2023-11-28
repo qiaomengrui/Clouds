@@ -1,0 +1,26 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/qiaomengrui/springcloud-config.git
+          search-paths:
+            - springcloud-config
+          username: 1393092021@qq.com
+          password: qiao19971103
+      label: main
+
+# http://localhost:3344/main/config-dev.yml 看配置
+# /{label}/{application}-{profile}.yml
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:7001/eureka/
+#    register-with-eureka: true  # 注册到eureka,不注册自己
+#    fetch-registry: true  # 注册中心不拉取服务注册信息
