@@ -34,4 +34,10 @@ public class OrderController {
         String url = PAYMENT_SQL_URL + "/payment/create";
         return restTemplate.postForObject(url, payment, CommonResult.class);
     }
+
+    @GetMapping("/consumer/payment/zipkin")
+    public CommonResult zipkin(){
+        String url = PAYMENT_SQL_URL + "/payment/zipkin";
+        return restTemplate.getForObject(url, CommonResult.class);
+    }
 }

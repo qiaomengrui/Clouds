@@ -48,4 +48,12 @@ public class PaymentController {
             return CommonResult.valueOf(444,"查询失败");
         }
     }
+
+    @GetMapping("/payment/zipkin")
+    public CommonResult paymentZipkin(){
+        log.info("请求zipkin服务端口{}", port);
+        return CommonResult.valueOf(200,"hi,i am payment zipkin");
+    }
 }
+
+
