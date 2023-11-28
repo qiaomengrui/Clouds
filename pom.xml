@@ -34,6 +34,8 @@
     <module>server-gateway</module>
     <module>config-server</module>
     <module>config-client</module>
+    <module>alibaba-payment-provider</module>
+    <module>alibaba-consumer-consumer</module>
   </modules>
 
 
@@ -80,7 +82,9 @@
       <dependency>
         <groupId>com.alibaba.cloud</groupId>
         <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-        <version>2021.0.8.0</version>
+        <version>2021.0.4.0</version>
+        <type>pom</type>
+        <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>mysql</groupId>
