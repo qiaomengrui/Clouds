@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: nacos-payment-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml # 配置文件后缀
+        group: DEV_GROUP
+        namespace: f7f8bf9f-3e11-4506-ab04-7bc02e6140dc
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

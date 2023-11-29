@@ -36,6 +36,8 @@
     <module>config-client</module>
     <module>alibaba-payment-provider</module>
     <module>alibaba-consumer-consumer</module>
+    <module>alibaba-sentinel-service</module>
+    <module>alibaba-sentinel-feign-service</module>
   </modules>
 
 

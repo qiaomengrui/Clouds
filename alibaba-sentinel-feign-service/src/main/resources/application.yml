@@ -1,0 +1,26 @@
+server:
+  port: 8401
+
+spring:
+  application:
+    name: sentinel-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8080 # 控制台地址
+        port: 8719
+
+feign:
+  sentinel:
+    enabled: true  # **** 开启feign的sentinel支持 ****
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+

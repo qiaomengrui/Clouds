@@ -1,14 +1,4 @@
-server:
-  port: 8081
-
 spring:
-  application:
-    name: nacos-payment-provider
-  cloud:
-    nacos:
-      server-addr: 127.0.0.1:8848
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
+  profiles:
+#    active: dev # 开发环境
+    active: info # 开发环境
