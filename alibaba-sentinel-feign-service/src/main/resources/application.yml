@@ -12,10 +12,18 @@ spring:
       transport:
         dashboard: localhost:8080 # 控制台地址
         port: 8719
+      datasource:
+        nacos:
+          server-addr: 127.0.0.1:8848
+          dataId: sentinel-server
+          groupId: DEFAULT_GROUP
+          data-type: json
+          rule-type: flow
+
 
 feign:
   sentinel:
-    enabled: true  # **** 开启feign的sentinel支持 ****
+    enabled: true  # **** 开启feign的sentinel支持 ***
 
 
 management:
