@@ -1,0 +1,52 @@
+server:
+  port: 2001
+
+spring:
+  application:
+    name: seata-order-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        group: SEATA_GROUP # 这里配置到哪个组主要看自己
+        cluster-name: GZ # 这里配置到哪个集群要看自己 这里没有强制性要求
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/seata_order?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 123456
+
+feign:
+  sentinel:
+    enabled: true
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
+
+# seata 配置
+seata:
+  tx-service-group: liuzigu-tx-group #事务组名称 必须一定和你服务端配置的一样
+  service:
+    vgroup-mapping:
+      liuzigu-tx-group: GZ  #事务组内容 须一定和你服务端配置的一样
+  config:
+    type: nacos
+    nacos:
+      group: SEATA_GROUP
+      server-addr: 127.0.0.1:8848
+#      username: nacos
+#      password: nacos
+      # 注册中心按照这个要求配置和服务端类似
+  registry:
+    type: nacos
+    nacos:
+      server-addr: 127.0.0.1:8848
+#      username: nacos
+#      password: nacos
+      cluster: GZ
+      group: SEATA_GROUP
+      application: seata-server
+
+

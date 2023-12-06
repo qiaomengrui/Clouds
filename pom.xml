@@ -38,6 +38,9 @@
     <module>alibaba-consumer-consumer</module>
     <module>alibaba-sentinel-service</module>
     <module>alibaba-sentinel-feign-service</module>
+    <module>seata-order-module</module>
+    <module>seata-storage-module</module>
+    <module>seata-account-module</module>
   </modules>
 
 
